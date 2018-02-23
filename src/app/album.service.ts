@@ -23,4 +23,11 @@ export class AlbumService {
     return this.database.object('albums/' + albumId);
   }
 
+  updateAlbum(albumToUpdate){
+    let albumEntryInFirebase = this.getAlbumById(albumToUpdate.$key);
+    albumEntryInFirebase.update({title: albumToUpdate.name,
+                                artist: albumToUpdate.artist,
+                                description: albumToUpdate.description});
+  }
+
 }
