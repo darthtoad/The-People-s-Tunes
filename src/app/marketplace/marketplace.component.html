@@ -1,0 +1,7 @@
+<h2>Distribution Center</h2>
+
+<div *ngFor="let album of albums | async" (click)="goToDetailPage(album)" class="panel panel-default">
+  <div class="panel-body">
+    <h3>{{album.artist}} - {{album.name}}</h3>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Album</h3>
+  </div>
+  <div class="panel-body">
+    <label>Album Name:</label>
+    <br>
+    <input #newName>
+    <br>
+    <label>Album Artist:</label>
+    <br>
+    <input #newArtist>
+    <br>
+    <label>Album Description:</label>
+    <br>
+    <textarea #newDescription></textarea><br>
+    <button (click)="submitForm(newName.value, newArtist.value, newDescription.value); newName.value=''; newArtist.value=''; newDescription.value=''">Add New Album</button>
+  </div>
+</div>
