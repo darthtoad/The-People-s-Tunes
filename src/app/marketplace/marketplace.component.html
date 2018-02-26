@@ -1,6 +1,6 @@
 <h2>Distribution Center</h2>
 
-<div *ngFor="let album of albums | async" (click)="goToDetailPage(album)" class="panel panel-default">
+<div *ngFor="let album of albums | async" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(album)">{{album.artist}} - {{album.name}}</h3>
     <div *ngIf="currentRoute === '/admin'">

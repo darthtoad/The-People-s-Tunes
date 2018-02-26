@@ -25,7 +25,7 @@ export class AlbumService {
 
   updateAlbum(albumToUpdate){
     let albumEntryInFirebase = this.getAlbumById(albumToUpdate.$key);
-    albumEntryInFirebase.update({title: albumToUpdate.name,
+    albumEntryInFirebase.update({name: albumToUpdate.name,
                                 artist: albumToUpdate.artist,
                                 description: albumToUpdate.description});
   }
