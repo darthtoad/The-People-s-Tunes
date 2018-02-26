@@ -30,4 +30,9 @@ export class AlbumService {
                                 description: albumToUpdate.description});
   }
 
+  deleteAlbum(albumToDelete){
+    let albumEntryInFirebase = this.getAlbumById(albumToDelete.$key);
+    albumEntryInFirebase.remove();
+  }
+
 }

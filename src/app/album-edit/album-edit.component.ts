@@ -20,4 +20,10 @@ export class AlbumEditComponent implements OnInit {
     this.albumService.updateAlbum(albumToUpdate);
   }
 
+  beginDeletingAlbum(albumToDelete) {
+    if (confirm(`Are you sure you want to delete the album ${albumToDelete.name}?`)) {
+      this.albumService.deleteAlbum(albumToDelete);
+    }
+  }
+
 }
